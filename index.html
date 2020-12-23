@@ -16,15 +16,25 @@
 			<h1>Proyecto de Automatas</h1>
 		</header>
 		<div class="contenedor_padre">
-			<p>Ingresa tu CURP:</p>
-			<input type="text" id="entrada_cadena" />
+			<p>Ingresa tu Expresion Regular: (Si deja vacio el campo puede verificar su curp)</p>
+			<input
+				type="text"
+				class="entrada_cadena"
+				placeholder="[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])"
+				id="EXP_REG"
+			/>
 
-			<button id="verificar" class="btn_verificar">Verificar curp</button>
+			<input
+				type="text"
+				class="entrada_cadena"
+				placeholder="Cadena"
+				id="CURP"
+			/>
+
+			<button id="verificar" class="btn_verificar">Comprobar</button>
 		</div>
 
-		
-
-		<div class="emoji"></div>
+	<div class="emoji"></div>
 		<script src="assets/js/app.js"></script>
 	</body>
 </html>

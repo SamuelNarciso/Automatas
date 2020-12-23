@@ -12,6 +12,7 @@ body {
 }
 
 .contenedor_padre {
+  text-align: center;
   height: 50vh;
   width: 100vw;
   display: -webkit-box;
@@ -59,9 +60,8 @@ header {
 
 header h1 {
   margin: 10px 0;
-  color: #eeeeee;
-  text-shadow: 0 0 2px #0c0c0c8e;
-  font-weight: 900;
+  color: #00adb5;
+  font-weight: 700;
   letter-spacing: 1.2px;
 }
 
@@ -70,7 +70,7 @@ p {
   font-weight: 200;
 }
 
-#entrada_cadena {
+.entrada_cadena {
   width: 60vw;
   height: 5vh;
   border: none;
@@ -99,6 +99,7 @@ p {
   cursor: pointer;
   background: #eeeeee;
   color: #00adb5;
+  border: 2px solid #00adb5;
 }
 
 .emoji {
@@ -174,5 +175,23 @@ p {
   }
   100% {
   }
+}
+
+.automata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px dotted #c51b1b;
+}
+
+.automata .esfera {
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: 2px dotted #c51b1b;
+  margin: 5px;
 }
 /*# sourceMappingURL=styles.css.map */

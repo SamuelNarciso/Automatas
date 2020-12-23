@@ -10,6 +10,7 @@ body {
 	overflow: hidden;
 }
 .contenedor_padre {
+text-align: center;
 	height: 50vh;
 	width: 100vw;
 	display: flex;
@@ -22,22 +23,21 @@ body {
 
 @keyframes ENTRADA {
 	0.0% {
-		transform: translateY(500%)
-		
+		transform: translateY(500%);
 	}
-	
+
 	100% {
-		transform: translateY(0%)
+		transform: translateY(0%);
 	}
 }
 
-header{
+header {
 	text-align: center;
 	h1 {
 		margin: 10px 0;
-		color: #eeeeee;
-		text-shadow: 0 0 2px #0c0c0c8e;
-		font-weight: 900;
+		color: #00adb5;
+		// text-shadow: 0 0 2px #0c0c0c8e;
+		font-weight: 700;
 		letter-spacing: 1.2px;
 	}
 }
@@ -46,7 +46,7 @@ p {
 	font-weight: 200;
 }
 
-#entrada_cadena {
+.entrada_cadena {
 	width: 60vw;
 	height: 5vh;
 	border: none;
@@ -72,6 +72,7 @@ p {
 		cursor: pointer;
 		background: #eeeeee;
 		color: #00adb5;
+		border: 2px solid #00adb5;
 	}
 }
 
@@ -113,5 +114,21 @@ p {
 		transform: rotate(-30deg);
 	}
 	100% {
+	}
+}
+
+.automata {
+	display: flex;
+	flex-wrap: wrap;
+
+	border: 2px dotted #c51b1b; // TODO: linea a borrar
+
+	.esfera {
+		border-radius: 50%;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		border: 2px dotted #c51b1b; // TODO: linea a borrar
+		margin: 5px;
 	}
 }

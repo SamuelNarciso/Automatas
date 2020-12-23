@@ -1,0 +1,36 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+    display: flex;
+	.izquierda {
+	}
+	.derecha {
+		border: 2px dotted #4909af; // TODO: linea a borrar
+	}
+
+	.width_50 {
+		width: 50vw;
+		border: 2px dotted #1bc57e; // TODO: linea a borrar
+	}
+	.height_50 {
+		border: 2px dotted #c51b1b; // TODO: linea a borrar
+		height: 50vh;
+	}
+	.height_100 {
+		height: 100vh;
+    }
+    
+}
+
+	.esfera {
+		border-radius: 50%;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		border: 2px dotted #c51b1b; // TODO: linea a borrar
+		margin: 5px;
+	}
