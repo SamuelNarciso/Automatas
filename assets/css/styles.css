@@ -8,6 +8,7 @@
 
 body {
   background: #eeee;
+  overflow: hidden;
 }
 
 .contenedor_padre {
@@ -26,9 +27,37 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: ENTRADA 1s ease 0s 1 normal none;
+          animation: ENTRADA 1s ease 0s 1 normal none;
 }
 
-h1 {
+@-webkit-keyframes ENTRADA {
+  0.0% {
+    -webkit-transform: translateY(500%);
+            transform: translateY(500%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes ENTRADA {
+  0.0% {
+    -webkit-transform: translateY(500%);
+            transform: translateY(500%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
   margin: 10px 0;
   color: #eeeeee;
   text-shadow: 0 0 2px #0c0c0c8e;
@@ -41,6 +70,16 @@ p {
   font-weight: 200;
 }
 
+#entrada_cadena {
+  width: 60vw;
+  height: 5vh;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #00adb5;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
 .btn_verificar {
   border: none;
   width: 25vw;
@@ -49,21 +88,91 @@ p {
   margin: 10px 0;
   background: #00adb5;
   color: #eeeeee;
-  -webkit-transition: ease .3s all;
-  transition: ease .3s all;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
   font-weight: 500;
 }
 
 .btn_verificar:hover {
-  -webkit-transition: ease .3s all;
-  transition: ease .3s all;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
   cursor: pointer;
   background: #eeeeee;
   color: #00adb5;
 }
 
 .emoji {
-  height: 50vh;
+  height: 40vh;
   width: 100vw;
+}
+
+.like {
+  background-image: url("../img/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-animation: LIKE 1s ease 0s 1 normal none;
+          animation: LIKE 1s ease 0s 1 normal none;
+}
+
+.dislike {
+  background-image: url("../img/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-animation: DISLIKE 1s ease 0s 1 normal none;
+          animation: DISLIKE 1s ease 0s 1 normal none;
+}
+
+@-webkit-keyframes DISLIKE {
+  0.0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  49.6% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+  }
+}
+
+@keyframes DISLIKE {
+  0.0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  49.6% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes LIKE {
+  0.0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  49.6% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+  }
+}
+
+@keyframes LIKE {
+  0.0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  49.6% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+  }
 }
 /*# sourceMappingURL=styles.css.map */

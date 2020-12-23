@@ -5,30 +5,55 @@
 	padding: 0;
 }
 
-body{
-	background: #eeee
+body {
+	background: #eeee;
+	overflow: hidden;
 }
 .contenedor_padre {
 	height: 50vh;
 	width: 100vw;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	animation: ENTRADA 1s ease 0s 1 normal none;
 }
 
-h1 {
-	margin: 10px 0;
-	color: #eeeeee;
-	text-shadow: 0 0 2px #0c0c0c8e;
-	font-weight: 900;
-	letter-spacing: 1.2px;
+@keyframes ENTRADA {
+	0.0% {
+		transform: translateY(500%)
+		
+	}
+	
+	100% {
+		transform: translateY(0%)
+	}
+}
 
+header{
+	text-align: center;
+	h1 {
+		margin: 10px 0;
+		color: #eeeeee;
+		text-shadow: 0 0 2px #0c0c0c8e;
+		font-weight: 900;
+		letter-spacing: 1.2px;
+	}
 }
 p {
 	margin: 10px 0;
 	font-weight: 200;
+}
+
+#entrada_cadena {
+	width: 60vw;
+	height: 5vh;
+	border: none;
+	background: none;
+	border-bottom: 2px solid #00adb5;
+	margin: 10px 0;
+	font-size: 15px;
 }
 
 .btn_verificar {
@@ -39,11 +64,11 @@ p {
 	margin: 10px 0;
 	background: #00adb5;
 	color: #eeeeee;
-	transition: ease .3s all;
+	transition: ease 0.3s all;
 	font-weight: 500;
-	
+
 	&:hover {
-		transition: ease .3s all;
+		transition: ease 0.3s all;
 		cursor: pointer;
 		background: #eeeeee;
 		color: #00adb5;
@@ -51,6 +76,42 @@ p {
 }
 
 .emoji {
-	height: 50vh;
+	height: 40vh;
 	width: 100vw;
+}
+
+.like {
+	background-image: url('../img/like.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: LIKE 1s ease 0s 1 normal none;
+}
+
+.dislike {
+	background-image: url('../img/like.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(180deg);
+	animation: DISLIKE 1s ease 0s 1 normal none;
+}
+
+@keyframes DISLIKE {
+	0.0% {
+		transform: rotate(0deg);
+	}
+	49.6% {
+		transform: rotate(180deg);
+	}
+	100% {
+	}
+}
+@keyframes LIKE {
+	0.0% {
+		transform: rotate(30deg);
+	}
+	49.6% {
+		transform: rotate(-30deg);
+	}
+	100% {
+	}
 }
