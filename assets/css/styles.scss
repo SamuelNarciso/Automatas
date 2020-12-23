@@ -4,3 +4,53 @@
 	margin: 0;
 	padding: 0;
 }
+
+body{
+	background: #eeee
+}
+.contenedor_padre {
+	height: 50vh;
+	width: 100vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	margin: 10px 0;
+	color: #eeeeee;
+	text-shadow: 0 0 2px #0c0c0c8e;
+	font-weight: 900;
+	letter-spacing: 1.2px;
+
+}
+p {
+	margin: 10px 0;
+	font-weight: 200;
+}
+
+.btn_verificar {
+	border: none;
+	width: 25vw;
+	height: 8vh;
+	border-radius: 6px;
+	margin: 10px 0;
+	background: #00adb5;
+	color: #eeeeee;
+	transition: ease .3s all;
+	font-weight: 500;
+	
+	&:hover {
+		transition: ease .3s all;
+		cursor: pointer;
+		background: #eeeeee;
+		color: #00adb5;
+	}
+}
+
+.emoji {
+	height: 50vh;
+	width: 100vw;
+}
